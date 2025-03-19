@@ -1,0 +1,349 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* En-tête */
+header {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px; /* Taille de police réduite pour mobile */
+}
+
+/* Menu déroulant */
+.menu {
+    position: relative;
+    display: inline-block;
+}
+
+.menu-button {
+    background-color: #005;
+    color: #fff;
+    padding: 8px 16px; /* Taille de bouton réduite pour mobile */
+    font-size: 14px; /* Taille de police réduite pour mobile */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button:hover {
+    background-color: #004080;
+}
+
+.menu-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    min-width: 120px; /* Largeur réduite pour mobile */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu-content a {
+    color: #333;
+    padding: 10px 12px; /* Espacement réduit pour mobile */
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+    font-size: 14px; /* Taille de police réduite pour mobile */
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Afficher le menu déroulant */
+.menu.active .menu-content {
+    display: block;
+}
+
+/* Section Formation 1 */
+.formation-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2 2px 4px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Largeur relative pour mobile */
+    margin: 20px auto;
+}
+
+.video-container {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.video-container video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.description {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.description h2 {
+    font-size: 20px; /* Taille de police réduite pour mobile */
+    margin-bottom: 10px;
+}
+
+.description p {
+    font-size: 14px; /* Taille de police réduite pour mobile */
+    color: #666;
+}
+
+.buy-button {
+    padding: 10px 20px;
+    font-size: 14px; /* Taille de police réduite pour mobile */
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
+    ajou 
+.image-text, .text-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+.image-text img, .text-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.slider {
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: none;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+
+
+footer {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Bannière de confiance */
+.trust-banner {
+    background-color: #34495e;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.trust-banner p {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Formulaire d'inscription par e-mail dans le pied de page */
+.email-subscription {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.email-subscription h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.email-subscription form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.email-subscription input[type="email"] {
+    padding: 8px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.email-subscription button {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #007BFF;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.email-subscription button:hover {
+    background-color: #f1f1f1;
+}
+
+#form-message {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #fff;
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+    .email-subscription form {
+        flex-direction: column;
+    }
+
+    .email-subscription input[type="email"] {
+        width: 70%;
+    }
+
+    .email-subscription button {
+        width: 40%;
+    }
+}
+/* Liens utiles */
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin: 10px;
+}
+
+.footer-section h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #007BFF;
+}
+
+/* Copyright */
+.copyright {
+    border-top: 1px solid #34495e;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+
+.copyright p {
+    margin: 0;
+    font-size: 12px;
+    color: #bdc3c7;
+}
+
+/* Responsive design pour les petits écrans */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+    }
+
+    .trust-banner p {
+        font-size: 12px;
+    }
+
+    .footer-section h3 {
+        font-size: 16px;
+    }
+
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .copyright p {
+        font-size: 10px;
+    }
+}
