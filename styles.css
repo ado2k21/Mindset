@@ -32,8 +32,8 @@ header h1 {
 }
 
 .menu-button {
-    background-color: #fbeba4d2;
-    color: #111111;
+    background-color: #004080;
+    color: #ffff;
     padding: 6px 15px; /* Taille de bouton réduite pour mobile */
     font-size: 15px; /* Taille de police réduite pour mobile */
     border: none;
@@ -44,7 +44,7 @@ header h1 {
 }
 
 .menu-button:hover {
-    background-color: #004080;
+    background-color: #004;
     color: #fff;
 }
 
@@ -309,54 +309,55 @@ header h1 {
     text-transform: uppercase;
 }
 
-#body-23 {
-    font-family: Arial, sans-serif;
+.limited-offer-container {
+    font-family: 'Arial', sans-serif;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    display: flex;
-    justify-content: center;
-    background-color: #f5f5f5; /* Conserve le fond gris */
-    min-height: 100vh;
-    margin: 0;
-}
-
-#body-23 .counter-container {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
     max-width: 500px;
-    width: 100%;
-    margin: auto;
+    margin: 20px auto;
+    text-align: center;
 }
 
-#body-23 .alert {
-    color: #e74c3c;
+.limited-offer-container .attention {
+    color: #3498db;
     font-weight: bold;
-    margin-bottom: 15px;
-    font-size: 1.3em;
-    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-#body-23 .progress-bar {
-    height: 20px;
-    background: #ecf0f1;
-    border-radius: 10px;
-    margin: 20px 0;
-    overflow: hidden;
+.limited-offer-container .progress-container {
+    width: 100%;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin: 15px 0;
+    height: 15px;
 }
 
-#body-23 .progress-fill {
+.limited-offer-container .progress-bar {
     height: 100%;
-    background: #e74c3c;
-    width: 0;
-    transition: width 0.5s ease;
+    border-radius: 5px;
+    background-color: #3498db;
+    width: 85%;
 }
 
-#body-23 .counter {
+.limited-offer-container .places-info {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 12px;
+}
+
+.limited-offer-container .places-available {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #3498db;
+}
+
+.limited-offer-container .places-taken {
     color: #7f8c8d;
-    text-align: center;
-    font-size: 1.1em;
-    margin-top: 10px;
+    margin-top: 1px;
 }
 
 .image-text, .text-image {
@@ -411,7 +412,35 @@ header h1 {
   right: 3px;
 }
 
+/* COMPOSANT STATISTIQUES */
+.stats-line {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 5px;
+    width: 100%;
+    margin: 20px 0;
+}
 
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 0;
+    padding: 0 10px;
+}
+
+.stat-number {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+    font-weight: bold;
+    color: #2563eb;
+    line-height: 1.2;
+}
+
+.stat-label {
+    font-size: clamp(0.7rem, 3vw, 1rem);
+    color: #7f8c8d;
+    margin-top: 5px;
+}
 
 footer {
     background-color: #2c3e50;
@@ -441,68 +470,7 @@ footer .trust-banner img {
   height: auto;
 }
 
-/* Formulaire d'inscription par e-mail dans le pied de page */
-.email-subscription {
-    margin-top: 20px;
-    text-align: center;
-}
 
-.email-subscription h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #fff;
-}
-
-.email-subscription form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-}
-
-.email-subscription input[type="email"] {
-    padding: 8px 10px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px;
-    width: 200px;
-}
-
-.email-subscription button {
-    padding: 8px 16px;
-    font-size: 14px;
-    color: #007BFF;
-    background-color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.email-subscription button:hover {
-    background-color: #f1f1f1;
-}
-
-#form-message {
-    margin-top: 10px;
-    font-size: 1px;
-    color: #fff;
-}
-
-/* Responsive design pour les petits écrans */
-@media (max-width: 768px) {
-    .email-subscription form {
-        flex-direction: column;
-    }
-
-    .email-subscription input[type="email"] {
-        width: 50%;
-    }
-
-    .email-subscription button {
-        width: 40%;
-    }
-}
 /* Liens utiles */
 .footer-links {
     display: flex;

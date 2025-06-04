@@ -41,46 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
   showSlide(currentSlide);
 });
 
-// Gestion du formulaire d'inscription par e-mail
-const emailForm = document.getElementById('email-form');
-const formMessage = document.getElementById('form-message');
-
-emailForm.addEventListener('submit', async (e) => {
-    e.preventDefault(); // Empêcher l'envoi du formulaire par défaut
-
-    const formData = new FormData(emailForm);
-    const email = formData.get('email');
-
-    // Validation simple de l'e-mail
-    if (!email || !email.includes('@')) {
-        formMessage.textContent = 'Veuillez entrer une adresse e-mail valide.';
-        formMessage.style.color = 'red';
-        return;
-    }
-
-    // Envoyer les données du formulaire à Formspree
-    try {
-        const response = await fetch(emailForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-
-        if (response.ok) {
-            formMessage.textContent = 'Merci ! Vous recevrez bientôt nos offres.';
-            formMessage.style.color = 'green';
-            emailForm.reset(); // Réinitialiser le formulaire
-        } else {
-            formMessage.textContent = 'Une erreur s\'est produite. Veuillez réessayer.';
-            formMessage.style.color = 'red';
-        }
-    } catch (error) {
-        formMessage.textContent = 'Une erreur s\'est produite. Veuillez réessayer.';
-        formMessage.style.color = 'red';
-    }
-});
 
 // Désactiver le clic droit sur la page
 document.addEventListener('contextmenu', function (e) {
