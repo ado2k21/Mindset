@@ -159,3 +159,34 @@ setInterval(() => {
         discountBadge.style.transform = 'scale(1)';
     }, 300);
 }, 3000);
+
+// Notifications d'achat
+const emails = [
+    "Jean***@gmail.com", "Marie***@gmail.com", "Pierre***@gmail.com",
+    "Sophie***@gmail.com", "Thomas***@gmail.com", "Laura***@gmail.com",
+    "Nicolas***@gmail.com", "Sarah***@gmail.com", "David***@gmail.com",
+    "Julie***@gmail.com", "Alex***@gmail.com", "Camille***@gmail.com",
+    "Kevin***@gmail.com", "Emilie***@gmail.com", "Antoine***@gmail.com",
+    "Caroline***@gmail.com", "Franck***@gmail.com", "Elodie***@gmail.com",
+    "Vincent***@gmail.com", "Amandine***@gmail.com"
+];
+
+function showRandomNotification() {
+    const randomEmail = emails[Math.floor(Math.random() * emails.length)];
+    const messages = ["fèk achte Formation an", "apèn achte formation an"];
+    const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+    
+    const notification = document.getElementById("notification");
+    notification.textContent = `${randomEmail} ${randomMessage}`;
+    notification.style.display = "block";
+    
+    setTimeout(() => {
+        notification.style.display = "none";
+    }, 5000); // Disparaît après 5 secondes
+}
+
+// Démarrer les notifications après 3s et répéter toutes les 20s
+setTimeout(() => {
+    showRandomNotification();
+    setInterval(showRandomNotification, 20000);
+}, 3000);

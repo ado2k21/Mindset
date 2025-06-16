@@ -608,3 +608,27 @@ footer .trust-banner img {
         font-size: 10px;
     }
 }
+
+/* Notifications */
+.notification-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.notification {
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    animation: fadeIn 0.5s;
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
