@@ -609,8 +609,8 @@ footer .trust-banner img {
     }
 }
 
-/* Notifications */
-.notification-container {
+/* Notifications d'achat */
+#notification-container {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -626,6 +626,12 @@ footer .trust-banner img {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     animation: fadeIn 0.5s;
     display: none;
+    max-width: 300px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
 }
 
 @keyframes fadeIn {
