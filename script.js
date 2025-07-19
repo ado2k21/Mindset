@@ -203,3 +203,35 @@ document.addEventListener('DOMContentLoaded', function() {
     console.warn("Le logo principal n'a pas été trouvé");
   }
 });
+
+// Configuration
+const config = {
+    targetPercentage: 99,      // Pourcentage final
+    animationDuration: 1500,  // Durée animation en ms (1.5s)
+    repeatDelay: 10000,       // Répétition toutes les 10s
+    initialDelay: 500         // Délai avant première animation
+};
+
+const progressBar = document.getElementById('progress-bar');
+let currentPercentage = 0;
+
+function animate() {
+    if (currentPercentage < config.targetPercentage) {
+        currentPercentage += 1;
+        progressBar.style.width = currentPercentage + '%';
+        progressBar.textContent = currentPercentage + '%';
+        setTimeout(animate, config.animationDuration / config.targetPercentage);
+    } else {
+        setTimeout(resetAnimation, config.repeatDelay - config.animationDuration);
+    }
+}
+
+function resetAnimation() {
+    currentPercentage = 0;
+    progressBar.style.width = '0%';
+    progressBar.textContent = '0%';
+    setTimeout(animate, config.initialDelay);
+}
+
+// Démarrer l'animation
+setTimeout(animate, config.initialDelay);
