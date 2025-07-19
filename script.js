@@ -195,3 +195,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(showRandomNotification, 30000 + Math.random() * 10000);
     }, 30000);
 });
+
+// Vérifie que le logo est bien chargé
+document.addEventListener('DOMContentLoaded', function() {
+  const logo = document.querySelector('img[src*="logogoogle"]');
+  if (!logo) {
+    console.warn("Le logo principal n'a pas été trouvé");
+  }
+});
