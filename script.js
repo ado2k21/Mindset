@@ -278,3 +278,42 @@ document.addEventListener('DOMContentLoaded', function() {
     // Mettre à jour toutes les 6 secondes
     setInterval(updateEarnings, 7000);
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const generateBtn = document.getElementById('generateBtn');
+    const referralResult = document.getElementById('referralResult');
+    const referralLink = document.getElementById('referralLink');
+    const copyBtn = document.getElementById('copyBtn');
+    
+    function generateRandomId() {
+        return Math.random().toString(36).substring(2, 9);
+    }
+    
+    function generateReferralLink() {
+        const baseUrl = "https://www.haitianmindset.com/";
+        const refId = generateRandomId();
+        return `${baseUrl}?ref=${refId}`;
+    }
+    
+    generateBtn.addEventListener('click', function() {
+        const link = generateReferralLink();
+        referralLink.textContent = link;
+        referralResult.style.display = 'block';
+        referralResult.scrollIntoView({ behavior: 'smooth' });
+    });
+    
+    copyBtn.addEventListener('click', function() {
+        const textToCopy = referralLink.textContent;
+        navigator.clipboard.writeText(textToCopy)
+            .then(() => {
+                copyBtn.textContent = '✓ Lien copié!';
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copier le lien';
+                }, 2000);
+            })
+            .catch(err => {
+                console.error('Erreur lors de la copie: ', err);
+                copyBtn.textContent = 'Erreur de copie';
+            });
+    });
+});
