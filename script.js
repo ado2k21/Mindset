@@ -235,3 +235,46 @@ function resetAnimation() {
 
 // Démarrer l'animation
 setTimeout(animate, config.initialDelay);
+
+// Fonction pour animer les valeurs
+function animateValue(id, start, end, duration) {
+    const obj = document.getElementById(id);
+    let startTimestamp = null;
+    const step = (timestamp) => {
+        if (!startTimestamp) startTimestamp = timestamp;
+        const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+        const value = Math.floor(progress * (end - start) + start);
+        obj.innerHTML = "Gdes " + value.toLocaleString();
+        if (progress < 1) {
+            window.requestAnimationFrame(step);
+        }
+    };
+    window.requestAnimationFrame(step);
+}
+
+// Fonction pour générer des données aléatoires
+function generateRandomEarnings() {
+    const baseTotal =   45000;
+    const baseUser =   750;
+    
+    return {
+        total: baseTotal + Math.floor(Math.random() * 1000),
+        user: baseUser + Math.floor(Math.random() * 50)
+    };
+}
+
+// Fonction pour mettre à jour les montants avec animation
+function updateEarnings() {
+    const earnings = generateRandomEarnings();
+    animateValue("totalEarnings", 0, earnings.total, 800);
+    animateValue("userEarnings", 0, earnings.user, 800);
+}
+
+// Au chargement de la page
+document.addEventListener('DOMContentLoaded', function() {
+    // Première animation
+    updateEarnings();
+    
+    // Mettre à jour toutes les 6 secondes
+    setInterval(updateEarnings, 7000);
+});
