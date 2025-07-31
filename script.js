@@ -162,10 +162,10 @@ setInterval(() => {
 
 document.addEventListener('DOMContentLoaded', function() {
     const emails = [
-        "Jean***@gmail.com",
-        "Marie***@gmail.com",
+        "Emilie***@gmail.com",
+        "Mrs Anna***@gmail.com",
         // ... (gardez votre liste d'emails complète)
-        "Romain***@gmail.com"
+        "Marcus J.***@gmail.com"
     ];
     
     const formations = [
