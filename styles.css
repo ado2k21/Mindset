@@ -98,13 +98,14 @@ header h1 {
             align-items: center;
             text-align: left;
             width: 100%;
-            max-width: 600px;
+            max-width: 700px;
             margin: 0 auto;
             margin-top: -13px;
         }
 
         .element-liste {
-            width: 100%;
+          font-family: 'Arial', sans-serif;
+            width: 103%;
             font-weight: bold;
             display: flex;
             margin-bottom: 10px;
@@ -453,11 +454,11 @@ header h1 {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #007BFF, #a777e3);
     color: white;
-    padding: 15px 5px;
+    padding: 15px;
     border-radius: 8px;
     width: 96%;
     max-width: 100%;
-    margin: 20px auto;
+    margin: 10px auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
@@ -522,7 +523,7 @@ header h1 {
     padding: 12px;
     border-radius: 6px;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 12px;
     backdrop-filter: blur(3px);
 }
 
@@ -530,6 +531,60 @@ header h1 {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 4px 0;
+}
+
+.generate-btn {
+    background: white;
+    color: #6e8efb;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 15px;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.generate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.referral-link {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 10px;
+    word-break: break-all;
+    font-size: 0.7rem;
+    display: none;
+    text-align: center;
+}
+
+.copy-btn {
+    background: white;
+    color: #6e8efb;
+    border: none;
+    padding: 8px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin: 10px auto 0;
+    cursor: pointer;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.copy-btn-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 @media (max-width: 350px) {
@@ -550,84 +605,6 @@ header h1 {
         font-size: 1.3rem;
     }
 }
-
-.referral-container {
-    font-family: 'Arial', sans-serif;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-.generate-btn {
-    background: white;
-    color: linear-gradient(135deg, #6e8efb, #a777e3);
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 1rem;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    display: block;
-    text-align: center;
-}
-
-.generate-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.btn-icon {
-    font-size: 1.2em;
-    margin-right: 8px;
-}
-
-.referral-result {
-    margin-top: 15px;
-    display: none;
-}
-
-.referral-link {
-    background: rgba(0, 0, 0, 0.05);
-    padding: 12px;
-    border-radius: 6px;
-    word-break: break-all;
-    font-size: 0.9rem;
-    border: 1px dashed rgba(0, 0, 0, 0.1);
-    margin-bottom: 8px;
-}
-
-.copy-btn {
-    background: white;
-    color: #0508c7;
-    border: none;
-    padding: 8px 15px;
-    font-weight: bold;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    width: 100%;
-}
-
-.copy-btn:hover {
-    opacity: 0.9;
-}
-
-@media (max-width: 480px) {
-    .generate-btn {
-        padding: 10px 15px;
-        font-size: 0.9rem;
-    }
-    
-    .referral-link {
-        font-size: 0.8rem;
-        padding: 10px;
-    }
-}
-
 
 footer {
     background-color: #2c3e50;
