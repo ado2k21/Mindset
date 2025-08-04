@@ -206,7 +206,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Configuration
 const config = {
-    targetPercentage: 96,      // Pourcentage final
+    targetPercentage: 97,      // Pourcentage final
     animationDuration: 1500,  // Durée animation en ms (1.5s)
     repeatDelay: 5000,       // Répétition toutes les 10s
     initialDelay: 500         // Délai avant première animation
