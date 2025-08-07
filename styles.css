@@ -248,6 +248,27 @@ header h1 {
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
 }
+.buy-button1 {
+    background: #007BFF;
+    color: #ffffff;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(230, 57, 70, 0.4);
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.buy-button1:hover {
+    background-color: #fbeba4d2;
+    color: #1d3557;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(230, 57, 70, 0.6);
+}
 
 @media (max-width: 600px) {
     .current-price {
@@ -265,6 +286,16 @@ header h1 {
 }
 
 .buy-button:hover {
+    background-color: #fbeba4d2;
+    color: #1d3557;
+}
+    .buy-button1 {
+        padding: 10px 25px;
+        font-size: 1.2rem;
+    }
+}
+
+.buy-button1:hover {
     background-color: #fbeba4d2;
     color: #1d3557;
 }
