@@ -735,6 +735,11 @@ footer .trust-banner img {
     gap: 25px;
 }
 
+{
+  "@type": "Organization",
+  "logo": "https://votresite.com/logogoogle.png"
+}
+
 .social-icon {
     width: 44px;
     height: 44px;
