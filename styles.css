@@ -667,6 +667,112 @@ footer .trust-banner img {
 }
 
 
+.partners-section {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        .partners-section h3 {
+            color: #f9ee5a;
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+            font-weight: 600;
+        }
+
+        .partners-section h3::after {
+            content: '';
+            position: absolute;
+            width: 40%;
+            height: 2px;
+            background: #e74c3c;
+            bottom: -5px;
+            left: 30%;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .partner-card {
+            background: #f0eeda;
+            border-radius: 10px;
+            padding: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 75%;
+        }
+
+        .partner-logo {
+            height: 70px;
+            width: auto;
+            max-width: 100%;
+            margin-bottom: 8px;
+            object-fit: contain;
+        }
+
+        .partner-name {
+            font-weight: 500;
+            font-size: 0.8rem;
+            color: #3498db;
+            margin-top: auto;
+            word-break: break-word;
+        }
+
+        .view-all {
+            margin-top: 15px;
+        }
+
+        
+        /* Interactions tactiles */
+        .partner-card:active {
+            transform: scale(0.98);
+        }
+
+        .view-all a:active {
+            opacity: 0.8;
+        }
+
+        /* Adaptations tablette */
+        @media (min-width: 600px) {
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 20px;
+            }
+            
+            .partner-logo {
+                height: 50px;
+            }
+        }
+
+        /* Adaptations desktop */
+        @media (min-width: 900px) {
+            .partners-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 25px;
+            }
+            
+            .partners-section h3 {
+                font-size: 1.4rem;
+            }
+            
+            .partner-logo {
+                height: 100px;
+            }
+            
+            .partner-name {
+                font-size: 0.9rem;
+            }
+        }
+
 /* Liens utiles */
 .footer-links {
     display: flex;
